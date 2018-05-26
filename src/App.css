@@ -1,0 +1,52 @@
+.App {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);  
+  background: #8e9eab;
+  background: linear-gradient(#eef2f3, #8e9eab);
+  text-align: center;
+  overflow: hidden;
+}
+
+.Content{
+  grid-column: 3/13;
+  grid-row: 1/13;
+}
+
+.NavContainer{
+  grid-row: 3/11;
+  grid-column: 1/3;
+  z-index: 10;
+}
+
+.LanguageSwitcherCon{
+  grid-column: 1/2;
+  grid-row: 12/13;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  z-index: 50;
+}
+
+.SnCon{
+  grid-column: 10/13;
+  grid-row: 12/13;
+  z-index: 50;  
+}
+
+@media screen and (max-width: 600px){
+  .NavContainer{
+    grid-row: 1;
+    grid-column: 1/13;
+  }
+  .Content{
+    grid-row: 2/13;
+    grid-column: 1/13;
+  }
+}

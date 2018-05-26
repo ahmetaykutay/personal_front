@@ -1,0 +1,19 @@
+.Sn{
+  background-color: transparent;
+  font-size: 2.5em;
+  padding: 10px 20px 30px 20px;
+}
+
+.Sn i{
+  padding: 0 20px 0 0;
+}
+
+.Sn a{
+  color: #136a8a;
+}
+
+.Sn a:hover i.fa-github{ color: #b67702; }
+.Sn a:hover i.fa-codepen{ color: #ffffff; }
+.Sn a:hover i.fa-linkedin-in{ color: #4875B4; }
+.Sn a:hover i.fa-facebook{ color: #3B5998; }
+.Sn a:hover i.fa-twitter{ color: #33CCFF; }

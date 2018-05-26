@@ -1,0 +1,40 @@
+.Nav{
+  list-style: none;
+}
+
+.Nav li{
+  margin: 15px 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+
+.Nav a{
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 2%;
+  color: #fff;
+  background: linear-gradient(to right, rgba(19, 106, 138, 0.5), rgba(38, 120, 113, 0.5));
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.Nav a:hover, .Nav a.active{
+  color: #ddd;
+  background: linear-gradient(to right, rgba(19, 106, 138, 1), rgba(38, 120, 113, 1));
+}
+
+@media screen and (max-width: 600px){
+  .Nav{
+    padding-left: 0;
+  }
+  .Nav li{
+    display: inline;
+    margin-right: 5px;
+    font-size: 1em;
+  }
+  .Nav a{
+    background-color: transparent;
+    display: inline;
+  }
+}

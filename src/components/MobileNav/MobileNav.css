@@ -1,0 +1,50 @@
+.MobileNav{
+  background: linear-gradient(#eef2f3, #8e9eab)
+}
+
+.MobileNav ul{
+  margin: 0;
+  padding: 0 0 20px 0;
+}
+
+.MobileNav ul li{
+  padding: 20px 20px 0px 20px;
+  font-size: 1.4em;
+}
+
+.MobileNavLinks a {
+  text-decoration: none;
+  color: #1c5853;
+  font-family: 'Roboto', sans-serif;
+}
+
+.MobileNavLinks.hide{
+  display: none;
+}
+
+.MenuIcon {
+  display: inline-block;
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  z-index: 100;
+}
+
+.MenuIcon .bar1, .MenuIcon .bar2, .MenuIcon .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #2a817a;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  transform: rotate(45deg) translate(-8px, -8px);
+}

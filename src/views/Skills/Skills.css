@@ -1,0 +1,10 @@
+.SkillsContainer{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-around;
+  padding: 30px 0;
+}
+.SkillsContainer div{
+  min-width: 180px;
+}

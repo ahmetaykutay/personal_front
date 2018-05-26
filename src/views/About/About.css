@@ -1,0 +1,16 @@
+.About p{
+  max-width: 70%;
+  margin: 5% auto;
+  font-size: 1.4em;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.01em;
+}
+
+.About img{
+  max-width: 20%;
+  max-height: 20%;
+  margin: 20px 0 0 0;
+  border: 2px solid rgba(38, 120, 113, 0.5);
+  border-radius: 50%;
+  transition: all 0.4s ease-in-out;
+}

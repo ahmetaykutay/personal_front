@@ -1,0 +1,152 @@
+.Contact-form{
+  font-family: inherit;
+  color: #444;
+  margin: 10px 0;
+}
+
+.Contact-form .form-control{
+  border: none;
+  border-bottom: 1px solid #444;
+  border-radius: 0;
+  transition: all 0.1s ease;
+  margin-bottom: 0;
+  padding-left: 0;
+  height: 40px;
+  width: 98%;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  color: transparent;
+  transition: all 0.3s ease;
+}
+
+.Contact-form .form-control:focus {
+  box-shadow: none;
+  color: #444;
+  outline: none;
+  padding-left: 10px;
+}
+
+.Contact-form .FocusValid:focus{
+  box-shadow: 0 0 30px 3px rgba(38, 120, 113, 0.5) , 0 0 5px 1px rgba(38, 120, 113, 0.5) inset;
+}
+.Contact-form .FocusNotValid:focus{
+  box-shadow: 0 0 30px 3px red , 0 0 5px 1px red inset;
+}
+
+.Contact-form .FocusValid:focus ~ span{
+  background-color: rgba(19, 106, 138, 1);
+  background: linear-gradient(rgba(19, 106, 138, 1), rgba(38, 120, 113, 0.5));  
+}
+
+.Contact-form .FocusNotValid:focus ~ span{
+  background-color: rgb(163, 30, 30);
+  background: linear-gradient(rgba(163, 30, 30, 1), rgba(163, 30, 30, 0.5));  
+}
+
+.Contact-form textarea.form-control {
+  resize: none;
+  transition: height 200ms ease-in;
+}
+
+.Contact-form textarea.form-control:focus{
+  height: 185px;
+  padding-top: 10px;
+}
+
+.Contact-form .form-group{
+  position: relative;
+  margin: 40px 0;
+}
+
+.Contact-form .form-group span{
+  width: 0;
+  height: 3px;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transition: all 200ms ease-in;
+}
+
+.Contact-form .form-group span#messageSpan{
+  bottom: 3px;
+}
+
+
+
+.Contact-form .form-group .form-control:focus ~ span{
+  width: 100%;
+  left: 0px;
+}
+
+.Contact-form label {
+  width: 100%;
+  height: 80%;
+  margin-bottom: 0;
+  padding-left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: left;
+  vertical-align: center;
+  line-height: 40px;
+  transition: transform 0.5s ease;
+  overflow: hidden;  
+}
+
+.Contact-form .form-control:focus + label{
+  transform: translate(0px, -25px);
+  opacity: 0;
+}
+
+.Contact-form .btn-default{
+  background-color: rgba(38, 120, 113, 1);
+  background: linear-gradient(to right, rgba(19, 106, 138, 1), rgba(38, 120, 113, 1));  
+  border: none;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border-radius: 5%;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+}
+.Contact-form .btn-default:focus{
+  outline: none;
+}
+
+.Contact-form .btn-default:hover{
+  background-color: rgba(19, 106, 138, 1);
+  cursor: pointer;  
+}
+
+.Contact-form .btn-default{
+  animation: glow 2s infinite alternate;
+}
+
+.Contact-form .btn-default:disabled{
+  cursor: not-allowed;
+  background-color: #b1b1b1;
+  background: linear-gradient(to right, rgb(150, 150, 150), rgb(130, 130, 130));  
+  color: #eee;
+  animation: none;
+}
+
+@media screen and (max-width: 600px){
+  .Contact-form .form-group .form-control:focus ~ span{
+    width: 102%;
+    left: 0px;
+  }
+}
+
+@keyframes glow{
+  0%{
+    /* background: linear-gradient(to right, rgba(19, 106, 138, 0.5), rgba(38, 120, 113, 0.5)); */
+    box-shadow: 0 0 10px -10px rgba(38, 120, 113, 0.5);
+  }
+  
+  100%{
+    /* background: linear-gradient(to right, rgba(19, 106, 138, 0.5), rgba(38, 120, 113, 0.5)); */
+    box-shadow: 0 0 10px 10px rgba(19, 106, 138, 0.5);
+  }
+}

@@ -1,0 +1,12 @@
+.Skill ul{
+  padding: 0;
+}
+
+.Skill li{
+  margin-top: 10px;
+}
+
+.Skill h3{
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
