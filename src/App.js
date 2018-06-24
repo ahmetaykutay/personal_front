@@ -48,6 +48,7 @@ class App extends Component {
 
   render() {
     const nav = window.innerWidth >= 600 ? <Nav /> : <MobileNav />
+    const lang = <div className="LanguageSwitcherCon" ><LanguageSwitcher onChange={this.changeLanguage} /></div>
 
     return (
       <IntlProvider locale={this.state.language} messages={messages[this.state.language]} >
@@ -56,8 +57,8 @@ class App extends Component {
             {nav}
           </div>
           <div className="Content" >{switchRoutes}</div>
-          <div className="LanguageSwitcherCon" ><LanguageSwitcher onChange={this.changeLanguage} /></div>
-          <div className="SnCon" ><SocialNetworks /></div>
+          {window.innerWidth > 720 ? lang: null}
+          {window.innerWidth > 720 ? <div className="SnCon" ><SocialNetworks /></div> : null}
           <Modal
             show={this.props.showModal}
             messageText={this.props.modalMessage.text}

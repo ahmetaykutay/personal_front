@@ -10,3 +10,9 @@
   font-weight: bold;
   letter-spacing: 0.05em;
 }
+
+@media screen and (max-width: 600px){
+  .LanguageSwitcher{
+    margin-bottom: 10px;
+  }
+}

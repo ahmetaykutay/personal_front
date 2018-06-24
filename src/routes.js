@@ -2,6 +2,7 @@ import Hero from './views/Hero/Hero'
 import About from './views/About/About'
 import Skills from './views/Skills/Skills'
 import Contact from './views/Contact/Contact'
+import Portfolio from './views/Portfolio/Portfolio'
 
 const routes = [
   {
@@ -21,6 +22,12 @@ const routes = [
     name: 'Skills',
     icon: null,
     component: Skills
+  },
+  {
+    path: '/portfolio',
+    name: 'Portfolio',
+    icon: null,
+    component: Portfolio
   },
   {
     path: '/contact',

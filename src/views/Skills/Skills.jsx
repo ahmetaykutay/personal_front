@@ -9,7 +9,7 @@ const my_skilss = [
   ['Backend', ['NodeJS', 'Express', 'mongoDB', 'Laravel']],
   ['Soft', ['Learning', 'Communication', 'Teamwork', 'Planning']],
   ['Tooling', ['Webpack', 'Git', 'Gulp & grunt']],
-  ['Other', ['graphQL', 'WordPress ( theme, plugin )', 'Blade', 'Handlebars', 'C/C++', 'Bash']],
+  ['Other', ['graphQL', 'WordPress ( theme, plugin )', 'Blade', 'Handlebars', 'C/C++', 'Bash', 'python']],
 ]
 
 const skills = (props) => {

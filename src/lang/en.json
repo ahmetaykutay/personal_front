@@ -23,5 +23,6 @@
   "contactPage.label_message": "Your Message",
   "contactPage.success_message": "Your message has been sent",
   "contactPage.failed_message": "Sending message failed",
-  "contactForm.SendButton": "Send"
+  "contactForm.SendButton": "Send",
+  "portfolioPage.title": "My Portfolio"
 }

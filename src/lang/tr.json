@@ -23,5 +23,6 @@
   "contactPage.label_message": "Mesajınız",
   "contactPage.success_message": "Mesajınız başarıyla gönderildi",
   "contactPage.failed_message": "Mesaj gönderme başarısız",
-  "contactForm.SendButton": "Gönder"
+  "contactForm.SendButton": "Gönder",
+  "portfolioPage.title": "Portfolyom"
 }
