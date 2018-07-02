@@ -47,7 +47,7 @@ class App extends Component {
   }
 
   render() {
-    const nav = window.innerWidth >= 600 ? <Nav /> : <MobileNav />
+    const nav = window.innerWidth >= 600 ? <Nav /> : <MobileNav langChange={this.changeLanguage} />
     const lang = <div className="LanguageSwitcherCon" ><LanguageSwitcher onChange={this.changeLanguage} /></div>
 
     return (

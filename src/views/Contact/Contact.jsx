@@ -77,8 +77,51 @@ class Contact extends Component {
     )
   }
 
+  clearForm = () => {
+    const newForm = this.state.contactForm
+    for (let key in newForm) {
+      newForm[key].value = ''
+      newForm[key].touched = false
+    }
+
+    this.setState({ contactForm: newForm })
+  }
+
   submitContactForm = (e) => {
     e.preventDefault()
+    // temp try formspree
+    // let fd = new FormData()
+    // fd.append('email', this.state.contactForm.email.value)
+    // fd.append('name', this.state.contactForm.name.value)
+    // fd.append('message', this.state.contactForm.message.value)
+    // fetch('https://formspree.io/the-rixi@windowslive.com', {
+    //   body: fd,
+    //   headers: {
+    //     "Content-Type": "multipart/form-data",
+    //   },
+    //   method: "post",
+    // }).then(res => console.log(res))
+    //   .then(data => {
+    //     const successM = this.props.intl.formatMessage({
+    //       id: 'contactPage.success_message',
+    //       defaultMessage: 'Your message has been sent'
+    //     })
+    //     this.props.showMessage('success', successM)
+    //     this.clearForm()
+    //     this.setState({ loading: false })
+    //   })
+    //   .catch(err => {
+    //     const failedM = this.props.intl.formatMessage({
+    //       id: 'contactPage.failed_message',
+    //       defaultMessage: 'Sending message failed'
+    //     })
+    //     this.props.showMessage('failed', failedM)
+    //     console.log(err)
+    //     this.clearForm()
+    //     this.setState({ loading: false })
+    //   })
+
+    //
     const messageData = {
       name: this.state.contactForm.name.value,
       email: this.state.contactForm.email.value,
@@ -96,11 +139,20 @@ class Contact extends Component {
       body: JSON.stringify(messageData)
     }).then(res => res.json())
       .then(data => {
-        const successM = this.props.intl.formatMessage({
-          id: 'contactPage.success_message',
-          defaultMessage: 'Your message has been sent'
-        })
-        this.props.showMessage('success', successM)
+        if (data.error) {
+          const failedM = this.props.intl.formatMessage({
+            id: 'contactPage.failed_message',
+            defaultMessage: 'Sending message failed'
+          })
+          this.props.showMessage('failed', failedM)
+        } else {
+          const successM = this.props.intl.formatMessage({
+            id: 'contactPage.success_message',
+            defaultMessage: 'Your message has been sent'
+          })
+          this.clearForm()
+          this.props.showMessage('success', successM)
+        }
         this.setState({ loading: false })
       })
       .catch(err => {

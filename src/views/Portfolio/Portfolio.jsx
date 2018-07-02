@@ -4,8 +4,8 @@ import './Portfolio.css'
 
 const projects = [
   {
-    name: "Portfolio", image: "https://codepen.io/ladesa/pen/rKwpPj/image/small.png",
-    link: "https://codepen.io/ladesa/full/rKwpPj"
+    name: "Ildem Cillingir", image: "images/ildem_cilingir.png",
+    link: "http://www.ildemcilingir.com/index.html"
   },
   {
     name: "Simon Game", image: "https://codepen.io/ladesa/pen/JrvPKa/image/small.png",
@@ -33,7 +33,16 @@ class Portfolio extends Component {
         <h1 className="slideUp"><FormattedMessage id="portfolioPage.title" defaultMessage="My Portfolio" /></h1>
         <div className="slideDown project-container">
           {projects.map((p, i) => (
-            <div key={i} className="project-card" ><a target="_blank" href={p.link}><img src={p.image} alt={p.name} /></a></div>
+            <div key={i} className="project-card" >
+              <img src={p.image} alt={p.name} />
+              <div className="gotoProject">
+                <a target="_blank" href={p.link}>
+                  <span>
+                    Go to Project
+                  </span>
+                </a>
+              </div>
+            </div>
           ))}
         </div>
       </div>

@@ -37,7 +37,7 @@ export const checkValidity = (value, rules) => {
     isValid = value.length <= rules.maxLength && isValid
   }
   if (rules.email) {
-    isValid = value.match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/) && isValid
+    isValid = value.match(/^[^@]+@[^@]+\.[^@\.]{2,}$/) && isValid
   }
   if (rules.mustSelect) {
     isValid = value !== 'none'

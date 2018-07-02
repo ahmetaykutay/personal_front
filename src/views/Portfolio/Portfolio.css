@@ -8,14 +8,52 @@
   overflow: scroll;
 }
 
+.project-container .project-card{
+  max-width: 400px;
+  position: relative;
+}
 
+.project-container img{
+  width:100%;
+}
 
+.gotoProject{
+  display: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(10, 51, 66, 0.5);
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+.gotoProject a{
+  z-index: 50;
+  color: #3ed3c6;
+  font-weight: bold;
+  font-size: 2em;
+  text-shadow: 1px 1px 2px #277972, 0 0 25px #277972, 0 0 5px #277972;
+  display: flex;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+}
+
+.gotoProject a span{
+  margin: auto;
+  width: 100%;
+}
+
+.project-card:hover .gotoProject{
+  display: flex;
+  opacity: 1;
+  cursor: pointer;
+}
 
 @media screen and (max-width: 720px){
   .project-container{
     grid-template-columns: 1fr;
-  }
-  .project-container img{
-    max-width: 100%;
   }
 }

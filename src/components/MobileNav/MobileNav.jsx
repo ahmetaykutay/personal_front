@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import './MobileNav.css'
 import NavLinks from '../NavLinks/NavLinks'
 import { withRouter } from 'react-router'
@@ -33,7 +34,7 @@ class MobileNav extends Component {
         </div>
         <div className={content_classes}>
           <div className="mobile-lang-switcher">
-            <LangSwitcher />
+            <LangSwitcher onChange={this.props.langChange} />
           </div>
           <NavLinks classes="MobileNavLinks" />
           <div className="social">
